@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boinst.Measure", "Boinst.Measure.csproj", "{A637EBAF-2C88-4D66-914C-20514CAF0615}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boinst.Measure.Tests", "..\Boinst.Measure.Tests\Boinst.Measure.Tests.csproj", "{573C6094-C27A-4DFD-8286-A3DA2297D68C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A637EBAF-2C88-4D66-914C-20514CAF0615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A637EBAF-2C88-4D66-914C-20514CAF0615}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A637EBAF-2C88-4D66-914C-20514CAF0615}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A637EBAF-2C88-4D66-914C-20514CAF0615}.Release|Any CPU.Build.0 = Release|Any CPU
+		{573C6094-C27A-4DFD-8286-A3DA2297D68C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{573C6094-C27A-4DFD-8286-A3DA2297D68C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{573C6094-C27A-4DFD-8286-A3DA2297D68C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{573C6094-C27A-4DFD-8286-A3DA2297D68C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

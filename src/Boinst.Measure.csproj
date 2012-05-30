@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A637EBAF-2C88-4D66-914C-20514CAF0615}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Boinst.Measure</RootNamespace>
+    <AssemblyName>Boinst.Measure</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Convert.cs" />
+    <Compile Include="Magnitude.cs" />
+    <Compile Include="Time\Days.cs" />
+    <Compile Include="Time\ITime.cs" />
+    <Compile Include="Time\Seconds.cs" />
+    <Compile Include="Time\Time.cs" />
+    <Compile Include="Measure.cs" />
+    <Compile Include="Length\Feet.cs" />
+    <Compile Include="Length\ILength.cs" />
+    <Compile Include="Length\Length.cs" />
+    <Compile Include="Length\Metres.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VolumetricFlow\CubicMetresPerSecond.cs" />
+    <Compile Include="VolumetricFlow\MegaLitresPerDay.cs" />
+    <Compile Include="Volume\CubicMetres.cs" />
+    <Compile Include="Volume\Litres.cs" />
+    <Compile Include="Volume\MegaLitres.cs" />
+    <Compile Include="Volume\Volume.cs" />
+    <Compile Include="Volume\IVolume.cs" />
+    <Compile Include="VolumetricFlow\IVolumetricFlow.cs" />
+    <Compile Include="VolumetricFlow\VolumetricFlow.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
