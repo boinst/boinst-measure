@@ -1,5 +1,6 @@
 ﻿namespace Boinst.Measure.Tests
 {
+    using Boinst.Measure.Area;
     using Boinst.Measure.Length;
 
     using NUnit.Framework;
@@ -39,7 +40,7 @@
         {
             var m1 = new Metres(1);
             var m2 = new Metres(1);
-            Area.Area a = m1 * m2;
+            Area a = m1 * m2;
             Assert.AreEqual(1, a, 1e-6);
         }
 
@@ -50,6 +51,15 @@
             var m2 = new Metres(20);
             double v = m1 / m2;
             Assert.AreEqual(0.2, v, 1e-6);
+        }
+
+        [Test]
+        public void LengthTimesAreaEqualsVolume()
+        {
+            Area area = new SquareMetres(1);
+            Length length = new Metres(1);
+            Volume.Volume volume = length * area;
+            Assert.AreEqual(1, volume, 1e-6);
         }
     }
 }

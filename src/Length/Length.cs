@@ -3,6 +3,7 @@ namespace Boinst.Measure.Length
     using System;
 
     using Boinst.Measure.Area;
+    using Boinst.Measure.Volume;
 
     /// <summary>
     /// Units of Length
@@ -61,6 +62,17 @@ namespace Boinst.Measure.Length
         public static Area operator *(Length l1, Length l2)
         {
             return (Area)Activator.CreateInstance(typeof(SquareMetres), new object[] { l1.ToMetres() * l2.ToMetres() });
+        }
+
+        /// <summary>
+        /// Length * Area = Volume
+        /// </summary>
+        /// <param name="l1"></param>
+        /// <param name="l2"></param>
+        /// <returns></returns>
+        public static Volume operator *(Length l1, Area l2)
+        {
+            return (Volume)Activator.CreateInstance(typeof(CubicMetres), new object[] { l1.ToMetres() * l2.ToSquareMetres() });
         }
 
         /// <summary>

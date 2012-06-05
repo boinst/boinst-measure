@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Area\Area.cs" />
+    <Compile Include="Area\Hectares.cs" />
     <Compile Include="Area\IArea.cs" />
     <Compile Include="Area\SquareMetres.cs" />
     <Compile Include="Convert.cs" />

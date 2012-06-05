@@ -22,5 +22,13 @@ namespace Boinst.Measure.VolumetricFlow
     public interface IVolumetricFlow
     {
         double ToCubicMetresPerSecond();
+
+
+        /// <summary>
+        /// Convert this VolumeFlow instance to an instance of type <typeparamref name="T"/>.
+        /// </summary>
+        /// <typeparam name="T">The type to convert to.</typeparam>
+        /// <returns>An instance of the desired type.</returns>
+        T To<T>() where T : IVolumetricFlow, IVolumetricFlow<T>;
     }
 }
