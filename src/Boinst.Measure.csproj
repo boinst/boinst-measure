@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Area\Area.cs" />
+    <Compile Include="Area\IArea.cs" />
+    <Compile Include="Area\SquareMetres.cs" />
     <Compile Include="Convert.cs" />
     <Compile Include="Magnitude.cs" />
     <Compile Include="Time\Days.cs" />

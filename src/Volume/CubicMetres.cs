@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Boinst.Measure.VolumetricFlow
+﻿namespace Boinst.Measure.Volume
 {
-    using Boinst.Measure.Volume;
-
     /// <summary>
+    /// Volume in Cubic Metres.
     /// </summary>
     public class CubicMetres : Volume, IVolume<CubicMetres>
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CubicMetres"/> class.
+        /// </summary>
+        /// <param name="value">
+        /// The value to initialise the instance with.
+        /// </param>
         public CubicMetres(double value)
             : base(value)
         {
@@ -21,9 +21,15 @@ namespace Boinst.Measure.VolumetricFlow
             return new CubicMetres(flow.ToCubicMetres());
         }
 
+        /// <summary>
+        /// Convert to a volume in cubic metres.
+        /// </summary>
+        /// <returns>
+        /// The volume in Cubic Metres.
+        /// </returns>
         public override double ToCubicMetres()
         {
-            return Value;
+            return this.Value;
         }
     }
 }

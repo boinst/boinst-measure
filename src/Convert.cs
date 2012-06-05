@@ -2,6 +2,9 @@ namespace Boinst.Measure
 {
     using System;
 
+    /// <summary>
+    /// Provides syntactically pleasant conversion methods
+    /// </summary>
     public static class Convert
     {
         public static T From<T>(double value) where T : Measure

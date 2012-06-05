@@ -2,6 +2,8 @@ namespace Boinst.Measure.Length
 {
     using System;
 
+    using Boinst.Measure.Area;
+
     /// <summary>
     /// Units of Length
     /// </summary>
@@ -48,6 +50,28 @@ namespace Boinst.Measure.Length
         public static Length operator -(Length l1, Length l2)
         {
             return new Metres(l1.ToMetres() - l2.ToMetres());
+        }
+
+        /// <summary>
+        /// Length * Length = Area
+        /// </summary>
+        /// <param name="l1"></param>
+        /// <param name="l2"></param>
+        /// <returns></returns>
+        public static Area operator *(Length l1, Length l2)
+        {
+            return (Area)Activator.CreateInstance(typeof(SquareMetres), new object[] { l1.ToMetres() * l2.ToMetres() });
+        }
+
+        /// <summary>
+        /// Length / Length = value
+        /// </summary>
+        /// <param name="l1">The numerator</param>
+        /// <param name="l2">The denominator</param>
+        /// <returns></returns>
+        public static double operator /(Length l1, Length l2)
+        {
+            return l1.ToMetres() / l2.ToMetres();
         }
     }
 }
