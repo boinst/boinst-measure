@@ -16,10 +16,10 @@ namespace Boinst.Measure.Time
 
         public static Days From(ITime time)
         {
-            return new Days(time.ToSeconds() / SecondsPerDay);
+            return new Days(time.ToStandardUnits() / SecondsPerDay);
         }
 
-        public override double ToSeconds()
+        public override double ToStandardUnits()
         {
             return this.Value * SecondsPerDay;
         }

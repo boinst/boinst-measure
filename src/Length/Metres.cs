@@ -5,19 +5,21 @@ namespace Boinst.Measure.Length
     /// </summary>
     public sealed class Metres : Length, ILength<Metres>
     {
+        private const double MetresPerMeter = 1.0;
+
         public Metres(double value)
             : base(value)
         {
         }
 
-        public override double ToMetres()
+        public override double ToStandardUnits()
         {
-            return this.Value;
+            return this.Value / MetresPerMeter;
         }
 
-        public Metres From(ILength length)
+        public Metres From(Length length)
         {
-            return new Metres(length.ToMetres());
+            return new Metres(length.ToStandardUnits() * MetresPerMeter);
         }
 
         public override string ToString()

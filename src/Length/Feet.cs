@@ -21,14 +21,14 @@
         {
         }
         
-        public override double ToMetres()
+        public override double ToStandardUnits()
         {
             return this.Value / feetPerMetre;
         }
 
-        public Feet From(ILength length)
+        public Feet From(Length length)
         {
-            return new Feet(length.ToMetres() * feetPerMetre);
+            return new Feet(length.ToStandardUnits() * feetPerMetre);
         }
 
         public override string ToString()

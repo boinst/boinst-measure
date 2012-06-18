@@ -25,10 +25,10 @@ namespace Boinst.Measure.VolumetricFlow
 
         public static MegaLitresPerDay From(IVolumetricFlow flow)
         {
-            return new MegaLitresPerDay(flow.ToCubicMetresPerSecond() * megalitresPerDayPerCubicMetrePerSecond);
+            return new MegaLitresPerDay(flow.ToStandardUnits() * megalitresPerDayPerCubicMetrePerSecond);
         }
 
-        public override double ToCubicMetresPerSecond()
+        public override double ToStandardUnits()
         {
             return Value / megalitresPerDayPerCubicMetrePerSecond;
         }

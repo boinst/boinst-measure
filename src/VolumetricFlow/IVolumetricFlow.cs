@@ -21,7 +21,7 @@ namespace Boinst.Measure.VolumetricFlow
     /// </summary>
     public interface IVolumetricFlow
     {
-        double ToCubicMetresPerSecond();
+        double ToStandardUnits();
 
 
         /// <summary>

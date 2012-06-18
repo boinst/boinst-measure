@@ -11,6 +11,6 @@
 
     public interface ITime
     {
-        double ToSeconds();
+        double ToStandardUnits();
     }
 }

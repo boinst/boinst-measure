@@ -16,10 +16,10 @@ namespace Boinst.Measure.Time
 
         public static Seconds From(ITime time)
         {
-            return new Seconds(time.ToSeconds());
+            return new Seconds(time.ToStandardUnits());
         }
 
-        public override double ToSeconds()
+        public override double ToStandardUnits()
         {
             return this.Value;
         }

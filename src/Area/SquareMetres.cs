@@ -14,14 +14,14 @@ namespace Boinst.Measure.Area
         /// <returns></returns>
         public SquareMetres From(IArea area)
         {
-            return new SquareMetres(area.ToSquareMetres());
+            return new SquareMetres(area.ToStandardUnits());
         }
 
         /// <summary>
         /// Convert to Square Metres.
         /// </summary>
         /// <returns></returns>
-        public override double ToSquareMetres()
+        public override double ToStandardUnits()
         {
             return this.Value;
         }

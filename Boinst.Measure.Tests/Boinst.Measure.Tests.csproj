@@ -31,6 +31,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Boinst.MeasureKai, Version=0.0.1.33720, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MeasureKai\Boinst.MeasureKai.dll</HintPath>
+    </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\src\packages\NUnit.2.6.0.12054\lib\nunit.framework.dll</HintPath>
     </Reference>
@@ -48,15 +52,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VolumeTests.cs" />
     <Compile Include="VolumetricFlowTests.cs" />
+    <Compile Include="WriteClasses.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\src\Boinst.Measure.csproj">
-      <Project>{A637EBAF-2C88-4D66-914C-20514CAF0615}</Project>
-      <Name>Boinst.Measure</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

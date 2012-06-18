@@ -1,6 +1,7 @@
 namespace Boinst.Measure.Tests
 {
-    using Boinst.Measure.VolumetricFlow;
+    using Boinst.MeasureKai;
+    using Boinst.MeasureKai.VolumetricFlow;
 
     using NUnit.Framework;
 

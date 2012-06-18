@@ -9,8 +9,6 @@ namespace Boinst.Measure.VolumetricFlow
         {
         }
 
-        public abstract double ToCubicMetresPerSecond();
-
         /// <summary>
         /// Convert this VolumeFlow instance to an instance of type <typeparamref name="T"/>.
         /// </summary>

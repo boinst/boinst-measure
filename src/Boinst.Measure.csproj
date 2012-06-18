@@ -45,6 +45,7 @@
     <Compile Include="Area\IArea.cs" />
     <Compile Include="Area\SquareMetres.cs" />
     <Compile Include="Convert.cs" />
+    <Compile Include="GenerateMagnitudes.cs" />
     <Compile Include="Magnitude.cs" />
     <Compile Include="Time\Days.cs" />
     <Compile Include="Time\ITime.cs" />
@@ -60,14 +61,16 @@
     <Compile Include="VolumetricFlow\MegaLitresPerDay.cs" />
     <Compile Include="Volume\CubicMetres.cs" />
     <Compile Include="Volume\Litres.cs" />
-    <Compile Include="Volume\MegaLitres.cs" />
     <Compile Include="Volume\Volume.cs" />
     <Compile Include="Volume\IVolume.cs" />
     <Compile Include="VolumetricFlow\IVolumetricFlow.cs" />
     <Compile Include="VolumetricFlow\VolumetricFlow.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

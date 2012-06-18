@@ -18,7 +18,7 @@
 
         public CubicMetres From(IVolume flow)
         {
-            return new CubicMetres(flow.ToCubicMetres());
+            return new CubicMetres(flow.ToStandardUnits());
         }
 
         /// <summary>
@@ -27,7 +27,7 @@
         /// <returns>
         /// The volume in Cubic Metres.
         /// </returns>
-        public override double ToCubicMetres()
+        public override double ToStandardUnits()
         {
             return this.Value;
         }

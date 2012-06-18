@@ -14,7 +14,5 @@
             : base(value)
         {
         }
-
-        public abstract double ToSeconds();
     }
 }

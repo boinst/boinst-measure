@@ -1,8 +1,9 @@
 namespace Boinst.Measure.Tests
 {
-    using Boinst.Measure.Area;
-    using Boinst.Measure.Length;
-    using Boinst.Measure.Volume;
+    using Boinst.MeasureKai;
+    using Boinst.MeasureKai.Area;
+    using Boinst.MeasureKai.Length;
+    using Boinst.MeasureKai.Volume;
 
     using NUnit.Framework;
 

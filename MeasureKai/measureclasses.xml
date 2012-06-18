@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Measures>
+    <!-- base unit of Length is Metres -->
+    <MeasureClass Name="Metres" Dimension="Length" Factor="1" />
+    <MeasureClass Name="Kilometres" Dimension="Length" Factor="0.001" />
+    <MeasureClass Name="Feet" Dimension="Length" Factor="3.2808399" />
+</Measures>

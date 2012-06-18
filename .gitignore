@@ -1,1 +1,6 @@
-/Boinst.Measure.Tests/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+bin
+obj
+Debug
+Release
+*.user
+src/packages

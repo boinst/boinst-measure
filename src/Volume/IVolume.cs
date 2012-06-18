@@ -23,7 +23,7 @@ namespace Boinst.Measure.Volume
         /// Convert to a volume in cubic metres.
         /// </summary>
         /// <returns></returns>
-        double ToCubicMetres();
+        double ToStandardUnits();
 
         /// <summary>
         /// Convert this Volume instance to an instance of type <typeparamref name="T"/>.

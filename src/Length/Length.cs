@@ -8,6 +8,7 @@ namespace Boinst.Measure.Length
     /// <summary>
     /// Units of Length
     /// </summary>
+    [Dimension("Length")]
     public abstract class Length : Measure, ILength
     {
         /// <summary>
@@ -21,13 +22,6 @@ namespace Boinst.Measure.Length
         {
         }
 
-        /// <summary>
-        /// The value of this Length in Metres
-        /// </summary>
-        /// <returns>
-        /// The equivalent of this length in metres.
-        /// </returns>
-        public abstract double ToMetres();
         
         public Length From<T>(double val) where T : Measure, ILength
         {
@@ -45,12 +39,12 @@ namespace Boinst.Measure.Length
 
         public static Length operator +(Length l1, Length l2)
         {
-            return new Metres(l1.ToMetres() + l2.ToMetres());
+            return new Metres(((Measure)l1).ToStandardUnits() + ((Measure)l2).ToStandardUnits());
         }
 
         public static Length operator -(Length l1, Length l2)
         {
-            return new Metres(l1.ToMetres() - l2.ToMetres());
+            return new Metres(((Measure)l1).ToStandardUnits() - ((Measure)l2).ToStandardUnits());
         }
 
         /// <summary>
@@ -61,7 +55,7 @@ namespace Boinst.Measure.Length
         /// <returns></returns>
         public static Area operator *(Length l1, Length l2)
         {
-            return (Area)Activator.CreateInstance(typeof(SquareMetres), new object[] { l1.ToMetres() * l2.ToMetres() });
+            return (Area)Activator.CreateInstance(typeof(SquareMetres), new object[] { ((Measure)l1).ToStandardUnits() * ((Measure)l2).ToStandardUnits() });
         }
 
         /// <summary>
@@ -72,7 +66,7 @@ namespace Boinst.Measure.Length
         /// <returns></returns>
         public static Volume operator *(Length l1, Area l2)
         {
-            return (Volume)Activator.CreateInstance(typeof(CubicMetres), new object[] { l1.ToMetres() * l2.ToSquareMetres() });
+            return (Volume)Activator.CreateInstance(typeof(CubicMetres), new object[] { ((Measure)l1).ToStandardUnits() * l2.ToStandardUnits() });
         }
 
         /// <summary>
@@ -83,7 +77,15 @@ namespace Boinst.Measure.Length
         /// <returns></returns>
         public static double operator /(Length l1, Length l2)
         {
-            return l1.ToMetres() / l2.ToMetres();
+            return ((Measure)l1).ToStandardUnits() / ((Measure)l2).ToStandardUnits();
         }
+
+        /// <summary>
+        /// The value of this Measure in Metres
+        /// </summary>
+        /// <returns>
+        /// The equivalent of this Measure in Metres
+        /// </returns>
+        public override abstract double ToStandardUnits();
     }
 }

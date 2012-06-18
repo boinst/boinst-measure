@@ -1,7 +1,9 @@
 ﻿namespace Boinst.Measure.Tests
 {
-    using Boinst.Measure.Area;
-    using Boinst.Measure.Length;
+    using Boinst.MeasureKai;
+    using Boinst.MeasureKai.Area;
+    using Boinst.MeasureKai.Length;
+    using Boinst.MeasureKai.Volume;
 
     using NUnit.Framework;
 
@@ -58,7 +60,7 @@
         {
             Area area = new SquareMetres(1);
             Length length = new Metres(1);
-            Volume.Volume volume = length * area;
+            Volume volume = length * area;
             Assert.AreEqual(1, volume, 1e-6);
         }
     }

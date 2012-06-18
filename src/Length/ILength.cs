@@ -6,11 +6,10 @@ namespace Boinst.Measure.Length
     /// <typeparam name="T"></typeparam>
     public interface ILength<out T> : ILength where T : ILength
     {
-        T From(ILength length);
+        T From(Length length);
     }
 
-    public interface ILength
+    public interface ILength : IMeasure
     {
-        double ToMetres();
     }
 }

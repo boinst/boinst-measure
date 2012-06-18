@@ -19,14 +19,14 @@
         /// <returns></returns>
         public Hectares From(IArea area)
         {
-            return new Hectares(area.ToSquareMetres() * HectaresPerSquareMetre);
+            return new Hectares(area.ToStandardUnits() * HectaresPerSquareMetre);
         }
 
         /// <summary>
         /// Convert to Square Metres.
         /// </summary>
         /// <returns></returns>
-        public override double ToSquareMetres()
+        public override double ToStandardUnits()
         {
             return Value / HectaresPerSquareMetre;
         }

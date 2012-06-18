@@ -9,7 +9,7 @@ namespace Boinst.Measure.Area
         /// Convert to Square Metres.
         /// </summary>
         /// <returns></returns>
-        double ToSquareMetres();
+        double ToStandardUnits();
     }
 
     /// <summary>

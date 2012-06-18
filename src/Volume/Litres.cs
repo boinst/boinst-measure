@@ -25,10 +25,10 @@ namespace Boinst.Measure.Volume
 
         public static Litres From(IVolume flow)
         {
-            return new Litres(flow.ToCubicMetres() * litresPerCubicMetre);
+            return new Litres(flow.ToStandardUnits() * litresPerCubicMetre);
         }
 
-        public override double ToCubicMetres()
+        public override double ToStandardUnits()
         {
             return base.Value / litresPerCubicMetre;
         }

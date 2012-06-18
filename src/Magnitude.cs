@@ -1,6 +1,6 @@
 ﻿namespace Boinst.Measure
 {
-    public static class Magnitude
+    public static class Magnitudes
     {
         public const double Deca = 1e1;
         public const double Hecto = 1e2;

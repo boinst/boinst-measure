@@ -13,7 +13,10 @@ namespace Boinst.Measure.Volume
         {
         }
 
-        public abstract double ToCubicMetres();
+        /// <summary>
+        /// Return the Volume in units of Cubic Metres
+        /// </summary>
+        public override abstract double ToStandardUnits();
 
         /// <summary>
         /// Volume / Time = VolumetricFlow
@@ -23,7 +26,7 @@ namespace Boinst.Measure.Volume
         /// <returns></returns>
         public static VolumetricFlow operator /(Volume l1, Time.Time l2)
         {
-            return new CubicMetresPerSecond(l1.ToCubicMetres() / l2.ToSeconds());
+            return new CubicMetresPerSecond(l1.ToStandardUnits() / l2.ToStandardUnits());
         }
 
         /// <summary>
@@ -34,7 +37,7 @@ namespace Boinst.Measure.Volume
         /// <returns></returns>
         public static Area operator /(Volume l1, Length l2)
         {
-            return new SquareMetres(l1.ToCubicMetres() / l2.ToMetres());
+            return new SquareMetres(l1.ToStandardUnits() / ((Measure)l2).ToStandardUnits());
         }
 
         /// <summary>
@@ -45,7 +48,7 @@ namespace Boinst.Measure.Volume
         /// <returns></returns>
         public static Length operator /(Volume l1, Area l2)
         {
-            return new Metres(l1.ToCubicMetres() / l2.ToSquareMetres());
+            return new Metres(l1.ToStandardUnits() / l2.ToStandardUnits());
         }
 
         /// <summary>

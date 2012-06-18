@@ -12,13 +12,6 @@
         }
 
         /// <summary>
-        /// Convert to Square Metres.
-        /// </summary>
-        /// <returns></returns>
-        public abstract double ToSquareMetres();
-
-
-        /// <summary>
         /// Area * Length = Volume
         /// </summary>
         /// <param name="l1"></param>
@@ -26,7 +19,7 @@
         /// <returns></returns>
         public static Volume operator *(Area l1, Length.Length l2)
         {
-            return (Volume)Activator.CreateInstance(typeof(CubicMetres), new object[] { l1.ToSquareMetres() * l2.ToMetres() });
+            return (Volume)Activator.CreateInstance(typeof(CubicMetres), new object[] { l1.ToStandardUnits() * ((Measure)l2).ToStandardUnits() });
         }
 
         /// <summary>

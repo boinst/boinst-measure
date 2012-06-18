@@ -22,10 +22,10 @@
 
         public static CubicMetresPerSecond From(IVolumetricFlow flow)
         {
-            return new CubicMetresPerSecond(flow.ToCubicMetresPerSecond());
+            return new CubicMetresPerSecond(flow.ToStandardUnits());
         }
 
-        public override double ToCubicMetresPerSecond()
+        public override double ToStandardUnits()
         {
             return Value;
         }

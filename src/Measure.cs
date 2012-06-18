@@ -1,7 +1,9 @@
 ﻿namespace Boinst.Measure
 {
     using System;
+    using System.Collections.Generic;
     using System.Globalization;
+    using System.Xml.Serialization;
 
     /// <summary>
     /// A measure.
@@ -9,7 +11,7 @@
     /// <remarks>
     /// Base class for all unit types in Boinst.Measure.
     /// </remarks>
-    public abstract class Measure
+    public abstract class Measure : IMeasure
     {
         /// <summary>
         /// The value (immutable)
@@ -25,6 +27,14 @@
         {
             get { return value; }
         }
+
+        /// <summary>
+        /// The value of this Measure in Standard Units
+        /// </summary>
+        /// <returns>
+        /// The equivalent of this Measure in Standard Units
+        /// </returns>
+        public abstract double ToStandardUnits();
 
         /// <summary>
         /// A measure may be implicitly converted to a double
@@ -53,5 +63,38 @@
         {
             return Value.ToString("0.0##E0", CultureInfo.CurrentCulture);
         }
+    }
+
+    public interface IMeasure
+    {
+        double ToStandardUnits();
+    }
+
+    public class MeasureClass
+    {
+        [XmlAttribute("Name")]
+        public string Name { get; set; }
+
+        [XmlAttribute("Dimension")]
+        public string Dimension { get; set; }
+
+        [XmlAttribute("Factor")]
+        public double Factor { get; set; }
+    }
+
+    [Serializable]
+    [XmlRoot("Measures")]
+    public class Measures : List<MeasureClass>
+    {
+    }
+
+    public class DimensionAttribute : Attribute
+    {
+        public DimensionAttribute(string name)
+        {
+            this.Name = name;
+        }
+
+        public string Name { get; private set; }
     }
 }
